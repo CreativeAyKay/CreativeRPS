@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CreativeRPS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="header">
+            <p class="gameName">Rock Paper Scissors</p>
+            <p class="pickYourMove">Pick Your Move &#59;&#41;</p>
+        </div>
+
+        <div class="movesContainer">
+            <button class="rockButton" onclick="
+                playerMove = 'Rock';
+                playerMoveImg = 'https:&#47;/lh3.googleusercontent.com/drive-viewer/AITFw-zAyP0AjzSBaYcEGwL91WxHzo0pzD0pje1bwiKL2E90VeDbE6OOb3HqbzA4ry8mvkXrue6cvaeSNymtkB4DkgqnZvGckQ=s1600';
+                pickComputerMove();
+                playGame();
+                calculateScore();
+                resultText();
+                "><img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-zAyP0AjzSBaYcEGwL91WxHzo0pzD0pje1bwiKL2E90VeDbE6OOb3HqbzA4ry8mvkXrue6cvaeSNymtkB4DkgqnZvGckQ=s1600" alt="" class="rockImg"></button>
+            <button class="paperButton" onclick="
+                playerMove = 'Paper';
+                playerMoveImg = 'https:&#47;/lh3.googleusercontent.com/drive-viewer/AITFw-yrFYARCSQdWKUcCWl2ckc0wruthCxiHxVEi2Wt4LpmYI5iRGLT-N2I0ka96CcmMBpOwwgC8yTOG_8flR83lFsYdIvnIg=s1600';
+                pickComputerMove();
+                playGame();
+                calculateScore();
+                resultText();
+                "><img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-yrFYARCSQdWKUcCWl2ckc0wruthCxiHxVEi2Wt4LpmYI5iRGLT-N2I0ka96CcmMBpOwwgC8yTOG_8flR83lFsYdIvnIg=s1600" alt="" class="paperImg"></button>
+            <button class="scissorsButton" onclick="
+                playerMove = 'Scissors'
+                playerMoveImg = 'https:&#47;/lh3.googleusercontent.com/drive-viewer/AITFw-zT2nnIgMNi0qcylh_vTE9fPbDIOHQnNmcv_cmQlHXCZotsLBFK2MLVG6VVkhnMACtp6FMM36z3BdSz79rGyvQrqvYUPQ=s1600';
+                pickComputerMove();
+                playGame();
+                calculateScore();
+                resultText();
+                "><img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-zT2nnIgMNi0qcylh_vTE9fPbDIOHQnNmcv_cmQlHXCZotsLBFK2MLVG6VVkhnMACtp6FMM36z3BdSz79rGyvQrqvYUPQ=s1600" alt="" class="scissorsImg"></button>
+        </div>
+
+        <hr class="line">
+
+        <div class="resultText"></div>
+        
+        <div class="scoreText"></div>
+
+        <div class="resetButtonContainer">
+            <button class="resetScoreButton" onclick="
+                resetScore();
+                ">Reset Score</button>
+        </div>
+
+        <div class="footer">
+            <p class="footerText">Created by: <a href="https://www.github.com/creativeaykay" class="footerTextMe">CreativeAyKay</a></p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,179 @@
+body {
+    background-color: #1d1d1d;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 120px;
+    font-family: Arial;
+    color: white;
+    max-width: 700px;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+}
+
+.gameName {
+    font-weight: 700;
+    font-size: 30px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.pickYourMove {
+    font-size: 20px;
+    padding-top: 8px;
+    margin-top: 0;
+}
+
+.movesContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rockButton, .paperButton, .scissorsButton {
+    border-radius: 100%;
+    background-color: blueviolet;
+    border: none;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    transition: border-radius 0.2s, background-color 0.1s;
+}
+
+.rockButton:hover, .paperButton:hover, .scissorsButton:hover {
+    background-color: rgb(150, 85, 211);
+    border-radius: 25px;
+}
+
+.rockButton:active, .paperButton:active, .scissorsButton:active {
+    background-color: rgb(120, 24, 209);
+}
+
+.rockImg, .paperImg, .scissorsImg {
+    height: 80px;
+}
+
+.line {
+    border: blueviolet 1px solid;
+    margin-top: 30px;
+    box-shadow: 0 0 5px 1px blueviolet;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.resetScoreButton {
+    background-color: transparent;
+    color: rgb(182, 104, 255);
+    border: blueviolet 4px solid;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    text-shadow: 0 0 0 5px blueviolet;
+    box-shadow: inset 0 0 5px 3px blueviolet,
+    0 0 18px 0.1px blueviolet;
+    position: relative;
+    transition: color 0.1s;
+}
+
+.resetScoreButton::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: blueviolet;
+    transform: perspective(100px) rotateX(60deg) scale(1, 0.6);
+    filter: blur(40px);
+    opacity: 0.7;
+}
+
+.resetScoreButton:hover {
+    color: #1d1d1d;
+}
+
+.resetScoreButton::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    background-color: blueviolet;
+    z-index: -1;
+    box-shadow: 0 0 50px 8px blueviolet;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.resetScoreButton:hover::before {
+    opacity: 1;
+}
+
+.resetScoreButton:hover::after {
+    opacity: 1;
+}
+
+.resetButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.resultText {
+    font-size: 20px;
+}
+
+.resultHeader {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.resultFooter {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.resultPlayerMove, .resultComputerMove {
+    text-align: center;
+}
+
+.scoreText {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.scoreTextWins, .scoreTextLosses, .scoreTextTies {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    left: 5%;
+    text-align: center;
+    background-color: #1d1d1d;
+}
+
+.footerText {
+    flex: 1;
+    font-size: 15px;
+}
+
+.footerTextMe {
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(234, 197, 255);
+}
