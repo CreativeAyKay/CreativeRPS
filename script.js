@@ -9,13 +9,13 @@ function pickComputerMove() {
     randomNumber = Math.random();
     if(randomNumber >= 0 && randomNumber < 1 / 3) {
         computerMove = 'Rock';
-        computerMoveImg = 'https:&#47;/lh3.googleusercontent.com/drive-viewer/AITFw-zAyP0AjzSBaYcEGwL91WxHzo0pzD0pje1bwiKL2E90VeDbE6OOb3HqbzA4ry8mvkXrue6cvaeSNymtkB4DkgqnZvGckQ=s1600';
+        computerMoveImg = '<a><img src="https://i.ibb.co/56VbHbG/Rock.png" alt="Rock" class="rockImg"></a>';
     } else if(randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
         computerMove = 'Paper';
-        computerMoveImg = 'https:&#47;/lh3.googleusercontent.com/drive-viewer/AITFw-yrFYARCSQdWKUcCWl2ckc0wruthCxiHxVEi2Wt4LpmYI5iRGLT-N2I0ka96CcmMBpOwwgC8yTOG_8flR83lFsYdIvnIg=s1600';
+        computerMoveImg = '<a><img src="https://i.ibb.co/4Z7QYPs/Paper.png" alt="Paper" class="paperImg"></a></button>';
     } else if(randomNumber >= 2 / 3 && randomNumber < 1) {
         computerMove = 'Scissors';
-        computerMoveImg = 'https:&#47;/lh3.googleusercontent.com/drive-viewer/AITFw-zT2nnIgMNi0qcylh_vTE9fPbDIOHQnNmcv_cmQlHXCZotsLBFK2MLVG6VVkhnMACtp6FMM36z3BdSz79rGyvQrqvYUPQ=s1600';
+        computerMoveImg = '<a><img src="https://i.ibb.co/xCMfxpf/Scissors.png" alt="Scissors" class="scissorsImg"></a>';
     }
 
 }
@@ -75,11 +75,11 @@ function resultText() {
 <div class="resultFooter">  
     <div class="resultPlayerMove">
         <p>You</p>
-        <img src="${playerMoveImg}" class="rockImg">
+        ${playerMoveImg}
     </div>
     <div class="resultComputerMove">
         <p>Bot</p>
-        <img src="${computerMoveImg}" class="rockImg">
+        ${computerMoveImg}
     </div>
 </div>`;
         scoreElement = document.querySelector('.scoreText');
